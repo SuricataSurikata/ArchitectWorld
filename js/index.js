@@ -10,14 +10,11 @@ $(document).ready(function(){
 
         $('#content p').html($(this).find('.text').html());
         $('#content .image').css('background-image', 'url("assets/lisasmall.png")');
-        $('.close-window').hide();
     });
 
     $("#content").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
         if (!$('.overlay').hasClass('visible'))
-            $('.overlay').fadeOut(100, function() {
-                $('.close-window').show();
-            });
+            $('.overlay').fadeOut(100);
     });
 
 
