@@ -1,26 +1,187 @@
-.info {
-	font-size: large;
-	position: absolute;
-	width: 100%;
-	padding-top: 12px;
-	padding-bottom: 12px;
-	background-color: #BBBBBB;
-	text-align: center;
-	top: 0;
-	left: 0;
-	opacity: 0.7;
+body {
+	background: rgba(0,0,0, .5) url('../assets/lisa.jpg') no-repeat;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+}
+
+#left-sidebar {
+	height: 90vh;
+	width: 30vw;
+	padding: 5vh 0 5vh 2vw;
 	display: table;
 }
 
+#left-sidebar h1 {
+	margin: 0;
+	display: table-row;
+}
 
-.label {
-    font-size: large;
-    width: 200px;
-    height: 100px;
-    overflow: auto;
-    position: absolute;
-    bottom: 0;
-    opacity: 1.0;
-    background-color: #BBBBBB;
-    
+#left-sidebar p {
+	display: table-row;
+	text-align: justify;
+}
+
+#elements {
+	display: table-cell;
+	vertical-align: bottom;
+}
+
+#elements .element {
+	background: white;
+	padding: 15px 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	text-align: justify;
+	cursor: pointer;
+	height: 100%;
+	overflow: hidden;
+}
+
+#elements .element .image {
+	float: left;
+	padding: 0 10px 0 0;
+}
+
+#elements .element .text {
+
+}
+
+.close {
+	background: white url('../assets/close.png') no-repeat center center;
+	padding: 10px 20px;
+	cursor: pointer;
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	z-index: 3000;
+}
+
+.overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.overlay #overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: .5;
+	background: grey;
+	overflow: hidden;
+}
+
+.overlay #content {
+	width: 50%;
+	min-height: 50vh;
+	position: relative;
+	margin: 25vh 25% 0 25%;
+	background: white;
+	z-index: 2000;
+}
+
+.overlay .close {
+	top: -10px;
+	right: -20px;
+}
+
+#thumbnail {
+	width: 10vw;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+@media only screen and (max-device-width: 650px){
+	body {
+		font-size: 15px;
+	}
+
+	#left-sidebar {
+		padding: 3vh 0 3vh 3vw;
+		width: 40vw;
+	}
+
+	#left-sidebar h1 {
+		font-size: 26px
+	}
+
+	#elements .element .text {
+		font-size: 15px
+	}
+
+	#thumbnail {
+		width: 15vw;
+		bottom: 3vh;
+		right: 3vw;
+	}
+}
+
+@media only screen and (min-device-width: 651px) and (max-device-width: 800px){
+	body {
+		font-size: 16px;
+	}
+
+	#left-sidebar {
+		width: 37vw;
+	}
+
+	#left-sidebar h1 {
+		font-size: 28px
+	}
+
+	#elements .element .text {
+		font-size: 16px
+	}
+}
+
+@media only screen and (min-device-width: 801px) and (max-device-width: 950px){
+	body {
+		font-size: 18px;
+	}
+
+	#left-sidebar {
+		padding: 4vh 0 4vh 4vw;
+		width: 35vw;
+	}
+
+	#left-sidebar h1 {
+		font-size: 30px
+	}
+
+	#elements .element .text {
+		font-size: 18px
+	}
+
+	#thumbnail {
+		bottom: 4vh;
+		right: 4vw;
+	}
+}
+
+@media only screen and (min-device-width: 951px) {
+	body {
+		font-size: 20px;
+	}
+
+	#left-sidebar {
+		width: 30vw;
+	}
+
+	#left-sidebar h1 {
+		font-size: 36px;
+	}
+
+	#elements .element .text {
+		font-size: 20px;
+	}
+
 }
