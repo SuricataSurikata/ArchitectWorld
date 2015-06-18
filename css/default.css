@@ -46,8 +46,12 @@ body {
 	padding: 0 10px 0 0;
 }
 
+#elements .element .image img {
+	max-height: 15vh;
+}
+
 #elements .element .text {
-	font-size: 1em;
+	font-size: .9em;
 }
 
 .close {
@@ -96,8 +100,9 @@ body {
 
 .overlay #content .image {
 	float: left;
-	width: 30%;
-	height: 50vh;
+	width: 28%;
+	height: 48vh;
+	margin: 1vh 1%;
 	background-size: contain;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -105,7 +110,8 @@ body {
 
 .overlay #content p {
 	float: right;
-	width: 70%;
+	width: 68%;
+	margin: 1vh 1%;
 }
 
 .overlay .close {
@@ -121,7 +127,7 @@ body {
 	right: 20px;
 }
 
-@media only screen and (max-device-width: 650px){
+@media (max-device-width: 650px){
 	body {
 		font-size: 15px;
 	}
@@ -147,7 +153,7 @@ body {
 	}
 }
 
-@media only screen and (max-device-width: 799px){
+@media (max-device-width: 799px){
 	body {
 		font-size: 16px;
 	}
@@ -167,7 +173,7 @@ body {
 	}
 }
 
-@media only screen and (min-device-width: 800px) and (max-device-width: 1023px){
+@media (min-device-width: 800px) and (max-device-width: 1023px){
 	body {
 		font-size: 17px;
 	}
@@ -192,7 +198,7 @@ body {
 	}
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1199px) {
+@media (min-device-width: 1024px) and (max-device-width: 1199px) {
 	body {
 		font-size: 18px;
 	}
@@ -213,7 +219,7 @@ body {
 
 }
 
-@media only screen and (min-device-width: 1200px) {
+@media (min-device-width: 1200px) {
 	body {
 		font-size: 19px;
 	}
@@ -231,5 +237,10 @@ body {
 		padding: 1vh 2vw 1vh 1vw;
 		margin-top: 2vh;
 	}
+}
 
+@media (min-device-width: 1400px) {
+	#left-sidebar {
+		width: 30vw;
+	}
 }
