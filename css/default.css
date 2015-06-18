@@ -9,7 +9,6 @@ body {
 #left-sidebar {
 	height: 90vh;
 	width: 30vw;
-	padding: 5vh 0 5vh 2vw;
 	display: table;
 }
 
@@ -30,9 +29,7 @@ body {
 
 #elements .element {
 	background: white;
-	padding: 15px 10px;
-	margin: 10px 0;
-	border-radius: 5px;
+	border-radius: 3px;
 	text-align: justify;
 	cursor: pointer;
 	height: 100%;
@@ -45,7 +42,7 @@ body {
 }
 
 #elements .element .text {
-
+	font-size: 1em;
 }
 
 .close {
@@ -114,8 +111,9 @@ body {
 		font-size: 26px
 	}
 
-	#elements .element .text {
-		font-size: 15px
+	#elements .element  {
+		padding: 1vh 1vw;
+		margin-top: 1vh;
 	}
 
 	#thumbnail {
@@ -125,40 +123,43 @@ body {
 	}
 }
 
-@media only screen and (min-device-width: 651px) and (max-device-width: 800px){
+@media only screen and (max-device-width: 799px){
 	body {
 		font-size: 16px;
 	}
 
 	#left-sidebar {
-		width: 37vw;
+		padding: 3vh 0 3vh 3vw;
+		width: 40vw;
 	}
 
 	#left-sidebar h1 {
 		font-size: 28px
 	}
 
-	#elements .element .text {
-		font-size: 16px
+	#elements .element {
+		padding: 1vh 1vw;
+		margin-top: 2vh;
 	}
 }
 
-@media only screen and (min-device-width: 801px) and (max-device-width: 950px){
+@media only screen and (min-device-width: 800px) and (max-device-width: 1023px){
 	body {
-		font-size: 18px;
+		font-size: 17px;
 	}
 
 	#left-sidebar {
 		padding: 4vh 0 4vh 4vw;
-		width: 35vw;
+		width: 37vw;
 	}
 
 	#left-sidebar h1 {
 		font-size: 30px
 	}
 
-	#elements .element .text {
-		font-size: 18px
+	#elements .element {
+		padding: 1vh 1vw;
+		margin-top: 2vh;
 	}
 
 	#thumbnail {
@@ -167,21 +168,44 @@ body {
 	}
 }
 
-@media only screen and (min-device-width: 951px) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1199px) {
 	body {
-		font-size: 20px;
+		font-size: 18px;
 	}
 
 	#left-sidebar {
-		width: 30vw;
+		padding: 4vh 0 4vh 4vw;
+		width: 37vw;
+	}
+
+	#left-sidebar h1 {
+		font-size: 32px;
+	}
+
+	#elements .element {
+		padding: 1vh 1vw;
+		margin-top: 2vh;
+	}
+
+}
+
+@media only screen and (min-device-width: 1200px) {
+	body {
+		font-size: 19px;
+	}
+
+	#left-sidebar {
+		padding: 4vh 0 4vh 4vw;
+		width: 35vw;
 	}
 
 	#left-sidebar h1 {
 		font-size: 36px;
 	}
 
-	#elements .element .text {
-		font-size: 20px;
+	#elements .element {
+		padding: 1vh 2vw 1vh 1vw;
+		margin-top: 2vh;
 	}
 
 }
