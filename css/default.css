@@ -94,6 +94,20 @@ body {
 	-moz-transition: .5s margin ease-out;
 }
 
+.overlay #content .image {
+	float: left;
+	width: 30%;
+	height: 50vh;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.overlay #content p {
+	float: right;
+	width: 70%;
+}
+
 .overlay .close {
 	position: absolute;
 	top: -10px;

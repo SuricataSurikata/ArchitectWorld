@@ -9,7 +9,7 @@ $(document).ready(function(){
         $('#content').css({'margin': '25vh 25% 0'})
 
         $('#content p').html($(this).find('.text').html());
-        $('#content img').attr('src', 'assets/lisasmall.png');
+        $('#content .image').css('background-image', 'url("assets/lisasmall.png")');
         $('.close-window').hide();
     });
 
