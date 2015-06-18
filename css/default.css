@@ -4,13 +4,17 @@ body {
 	padding: 0;
 	margin: 0;
 	font-size: 16px;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 #left-sidebar {
 	height: 90vh;
 	width: 30vw;
 	display: table;
+}
+
+#left-sidebar #title {
+	display: table-row;
 }
 
 #left-sidebar h1 {
