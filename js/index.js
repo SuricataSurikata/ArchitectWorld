@@ -2,17 +2,9 @@ $(document).ready(function(){
 
     $('#thumbnail').attr('src', 'assets/lisasmall.png');
 
-    //var elements = [{img: '', }, [], []];
-    //
-    //$('#elements div').each(function() {
-    //
-    //});
-
-
-
-    $('#elements div').click(function(){
+    $('.element').click(function(){
         $('.overlay').fadeIn(200);
-        $('#content p').html($(this).html());
+        $('#content p').html($(this).find('.text').html());
         $('#content img').attr('src', 'assets/lisasmall.png');
         $('.close-window').hide();
     });
