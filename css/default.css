@@ -89,7 +89,6 @@ body {
 
 .overlay #content {
 	width: 50%;
-	min-height: 50vh;
 	position: relative;
 	margin: 25vh 100% 0;
 	background: white;
@@ -100,26 +99,31 @@ body {
 	-moz-transition: .5s margin ease-out;
 }
 
-.overlay #content .image {
+.overlay #content div {
+	overflow: hidden;
+}
+
+.overlay #content img {
 	float: left;
-	width: 28%;
-	height: 48vh;
-	margin: 1vh 1%;
-	background-size: contain;
-	background-position: center center;
-	background-repeat: no-repeat;
+	width: 22%;
+	margin: 5vh 5% 5vh 3%;
 }
 
 .overlay #content p {
+	border-top: 1px solid rgb(142, 123, 78);
+	line-height: 1.5em;
+	padding-top: 1vh;
+	text-align: left;
 	float: right;
-	width: 68%;
-	margin: 1vh 1%;
+	width: 65%;
+	margin: 5vh 5% 5vh 0;
 }
 
 .overlay .close {
 	position: absolute;
 	top: -20px;
 	right: -20px;
+	z-index: 3000;
 }
 
 #thumbnail {

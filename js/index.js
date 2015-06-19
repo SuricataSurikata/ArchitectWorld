@@ -6,10 +6,12 @@ $(document).ready(function(){
         $('.overlay').css({'left': '0', 'visibility': 'visible'}).fadeIn(100, function() {
             $(this).addClass('visible');
         });
-        $('#content').css({'margin': '25vh 25% 0'})
+        $('#content').css({'margin': '25vh 25% 0'});
+
 
         $('#content p').html($(this).find('.text').html());
-        $('#content .image').css('background-image', 'url("assets/lisasmall.png")');
+        //$('#content .image').css('background-image', 'url("assets/lisasmall.png")');
+        $('#content img').attr('src', 'assets/lisasmall.png');
     });
 
     $("#content").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
