@@ -81,29 +81,27 @@ body {
 
 #elements {
 	display: table-cell;
+	padding-top: 5px;
 	vertical-align: bottom;
 }
 
 #elements .element {
 	background: white;
-	border-radius: 3px;
 	text-align: justify;
 	cursor: pointer;
 	height: 100%;
 	overflow: hidden;
 }
 
-#elements .element .image {
+#elements .element img {
 	float: left;
-	padding: 0 10px 0 0;
-}
-
-#elements .element .image img {
 	max-height: 15vh;
+	padding: 5px 15px 5px 5px;
 }
 
 #elements .element .text {
-	font-size: .9em;
+	font-size: .8em;
+	padding: 5px 10px 5px 5px;
 }
 
 .close {
@@ -226,7 +224,7 @@ body {
 	}
 
 	#elements .element {
-		padding: 1vh 1vw;
+		/*padding: 1vh 1vw;*/
 		margin-top: 2vh;
 	}
 }
@@ -246,7 +244,7 @@ body {
 	}
 
 	#elements .element {
-		padding: 1vh 1vw;
+		/*padding: 1vh 1vw;*/
 		margin-top: 2vh;
 	}
 
@@ -271,7 +269,7 @@ body {
 	}
 
 	#elements .element {
-		padding: 1vh 1vw;
+		/*padding: 1vh 1vw;*/
 		margin-top: 2vh;
 	}
 
@@ -292,7 +290,7 @@ body {
 	}
 
 	#elements .element {
-		padding: 1vh 2vw 1vh 1vw;
+		/*padding: 1vh 2vw 1vh 1vw;*/
 		margin-top: 2vh;
 	}
 }
