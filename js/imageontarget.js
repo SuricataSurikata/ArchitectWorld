@@ -12,28 +12,38 @@ var World = {
 			Important: If you replace the tracker file with your own, make sure to change the target name accordingly.
 			Use a specific target name to respond only to a certain target or use a wildcard to respond to any or a certain group of targets.
 		*/
-		this.tracker = new AR.ClientTracker("assets/samalisa.wtc", {
+		this.tracker = new AR.ClientTracker("assets/MonaLisa.wtc", {
 			onLoaded: this.worldLoaded
 		});
 
-        this.imgButton = new AR.ImageResource("assets/cake.png");
+        //this.imgButton = new AR.ImageResource("assets/cake.png");
 
-        var pageOneButton = this.createWwwButton("http://pl.wikipedia.org/wiki/Lisa_Simpson", 0.25, {
-                                                 offsetX: 0.2,
-                                                 offsetY: -0.9,
-                                                 zOrder: 1
-                                                 });
+        //var pageOneButton = this.createWwwButton("http://pl.wikipedia.org/wiki/Lisa_Simpson", 0.25, {
+        //                                         offsetX: 0.2,
+        //                                         offsetY: -0.9,
+        //                                         zOrder: 1
+        //                                         });
 
 		/*
 			The next step is to create the augmentation. In this example an image resource is created and passed to the AR.ImageDrawable. A drawable is a visual component that can be connected to an IR target (AR.Trackable2DObject) or a geolocated object (AR.GeoObject). The AR.ImageDrawable is initialized by the image and its size. Optional parameters allow for position it relative to the recognized target.
 		*/
 
 		/* Create overlay for page one */
-		var imgOne = new AR.ImageResource("assets/imageOne.png");
-		var overlayOne = new AR.ImageDrawable(imgOne, 1, {
-			offsetX: -0.15,
-			offsetY: 0
+		var circle = new AR.ImageResource("assets/Circle.png");
+		var faceOverlay = new AR.ImageDrawable(circle, 0.35, {
+			offsetX: -0.02,
+			offsetY: 0.23
 		});
+        
+        var bgOverlay = new AR.ImageDrawable(circle, 0.25, {
+            offsetX: 0.21,
+            offsetY: 0.25
+        });
+        
+        var handsOverlay = new AR.ImageDrawable(circle, 0.45, {
+            offsetX: -0.07,
+            offsetY: -0.37
+        });
 
 		/*
 			The last line combines everything by creating an AR.Trackable2DObject with the previously created tracker, the name of the image target and the drawable that should augment the recognized image.
@@ -41,9 +51,9 @@ var World = {
 		*/
 		var pageOne = new AR.Trackable2DObject(this.tracker, "*", {
 			drawables: {
-				cam: [overlayOne, pageOneButton]
+				cam: [faceOverlay, bgOverlay, handsOverlay]
 			}
-		});
+});
 	},
 
     createWwwButton: function createWwwButtonFn(url, size, options) {
