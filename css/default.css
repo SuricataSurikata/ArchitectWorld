@@ -16,7 +16,7 @@
 
 body {
 	font-family: open_sanslight;
-	background: rgba(0,0,0, .5) url('../assets/lisa.jpg') no-repeat;
+	background: rgba(76,55,60, .5) ;
 	background-size: cover;
 	padding: 0;
 	margin: 0;
@@ -165,6 +165,7 @@ body {
 	padding-top: 1vh;
 	text-align: left;
 	float: right;
+	font-size: .8em;
 	width: 65%;
 	margin: 5vh 5% 5vh 0;
 }
@@ -177,10 +178,12 @@ body {
 }
 
 #thumbnail {
-	width: 10vw;
-	position: fixed;
+	border: 2px solid black;
 	bottom: 20px;
+	max-height: 40vh;
+	max-width: 20vw;
 	right: 20px;
+	position: fixed;
 }
 
 @media (max-device-width: 650px){

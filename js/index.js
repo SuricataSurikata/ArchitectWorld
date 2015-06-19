@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $('#thumbnail').attr('src', 'assets/lisasmall.png');
+    $('#thumbnail').attr('src', 'assets/lisa.jpg');
 
     $('.element').click(function(){
         $('.overlay').css({'left': '0', 'visibility': 'visible'}).fadeIn(100, function() {
