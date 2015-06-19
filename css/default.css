@@ -35,13 +35,27 @@ body {
 }
 
 #left-sidebar h1 {
+	color: white;
+	font-weight: 300;
+	line-height: 1.1em;
 	margin: 0;
-	display: table-row;
+}
+
+#left-sidebar h2 {
+	color: rgb(142, 123, 78);
+	font-size: 1em;
+	font-weight: 300;
+	padding-bottom: 10px;
+	border-bottom: 2px solid rgb(142, 123, 78);
+	margin: 0;
 }
 
 #left-sidebar p {
-	display: table-row;
-	text-align: justify;
+	color: white;
+	font-size: .9em;
+	padding: 10px 0 5px;
+	border-bottom: 1px solid rgb(142, 123, 78);
+	margin: 0;
 }
 
 #elements {
