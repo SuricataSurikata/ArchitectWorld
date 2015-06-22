@@ -1,5 +1,20 @@
 $(document).ready(function(){
 
+    (setLineHeight = function() {
+        var font = parseInt($('.text').css('font-size'), 10);
+        var height = parseInt($('.text').css('height'), 10);
+        $('.text').css('line-height', height/Math.floor(height/font) + 'px');
+
+        $('.text').each(function(){
+            if (this.offsetHeight < this.scrollHeight) {
+                console.log(this);
+                console.log('has overflov')
+                $(this).css({'content': '...', 'display': 'block'})
+            }
+        });
+
+    })();
+
     var resizeModalImage = function() {
         var height;
         if ((height = $('#content img').height() - 5) < 0)
@@ -32,6 +47,7 @@ $(document).ready(function(){
     $(window).resize(function() {
         setLeftSidebarPadding();
         resizeModalImage();
+        setLineHeight();
     });
 
 
