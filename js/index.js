@@ -18,8 +18,6 @@ $(document).ready(function(){
     img.src = 'assets/mona_lisa.jpg';
 
     (setLeftSidebarPadding = function() {
-        console.log('padding');
-
         var windowH = $(window).height();
         var sidebarH = $('#left-sidebar').css('height', '').height()
         var padding = (windowH - sidebarH) / 2;
@@ -41,12 +39,8 @@ $(document).ready(function(){
         $('.overlay').css({'left': '0', 'visibility': 'visible'}).fadeIn(100, function() {
             $(this).addClass('visible');
         });
-        $('#content').css({'margin': '25vh 25% 0'});
-
-
+        $('#content').addClass('modalMargin');
         $('#content p').html($(this).find('.text').html());
-        //$('#content .image').css('background-image', 'url("assets/lisasmall.png")');
-        //$('#content img').attr('src', 'assets/mona_lisa.jpg');
     });
 
     $("#content").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
@@ -57,8 +51,7 @@ $(document).ready(function(){
 
     $('#content .close, #overlay').click(function(){
         $('.overlay').removeClass('visible');
-        $('#content').css({'margin': '25vh 100% 0'})
-
+        $('#content').removeClass('modalMargin');
     });
 
 

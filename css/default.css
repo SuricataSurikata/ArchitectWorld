@@ -179,6 +179,10 @@ body {
 	z-index: 3000;
 }
 
+.modalMargin {
+	margin: 25vh 25% 0 !important;
+}
+
 #thumbnail {
 	border: 2px solid black;
 	bottom: 20px;
