@@ -1,21 +1,32 @@
 $(document).ready(function(){
-    
+
     var resizeModalImage = function(height) {
-        height = height || $('#content img').height();
-        height = height - 5;
+        height = $('#content img').height() - 5;
         var width = $('#content').width() - 75 - $('#content img').width();
         $('.overlay #content .container').height(height).width(width);
-        console.log('resize');
     };
 
     var img = new Image();
     img.onload = function() {
-        var height = $('#content img').attr('src', this.src).height();
-        resizeModalImage(height);
+        $('#content img').attr('src', this.src);
+        resizeModalImage();
     };
     img.src = 'assets/mona_lisa.jpg';
 
-    $(window).resize(function() {resizeModalImage()});
+    (setLeftSidebarPadding = function() {
+        console.log('padding');
+        var windowH = $(window).height();
+        var padding = (windowH - $('#left-sidebar').height()) / 2;
+        if (padding > 0)
+            //if (padding > 3 / 100 * windowH)
+            //    padding = 3 / 100 * windowH;
+            $('#left-sidebar').css({'padding-top': padding, 'padding-bottom': padding});
+    })();
+
+    $(window).resize(function() {
+        resizeModalImage();
+        setLeftSidebarPadding();
+    });
 
 
 
