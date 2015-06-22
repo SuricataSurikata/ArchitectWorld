@@ -18,11 +18,12 @@ $(document).ready(function(){
         var windowH = $(window).height();
         var sidebarH = $('#left-sidebar').height()
         var padding = (windowH - sidebarH) / 2;
-        if (padding > 0)
-            if (padding >= 30)
-                $('#left-sidebar').height(sidebarH + padding * 2 - 60);
+        if (padding > 0) {
+            if (padding > 30)
                 padding = 30;
+            $('#left-sidebar').css('height', 'calc(100vh - ' + 2 * padding + 'px)');
             $('#left-sidebar').css({'padding-top': padding, 'padding-bottom': padding});
+        }
     })();
 
     $(window).resize(function() {
