@@ -15,7 +15,7 @@ $(document).ready(function(){
         $('#content img').attr('src', this.src);
         resizeModalImage();
     };
-    img.src = 'assets/mona_lisa.jpg';
+    img.src = 'assets/lisa/mona_lisa.jpg';
 
     (setLeftSidebarPadding = function() {
         var windowH = $(window).height();
