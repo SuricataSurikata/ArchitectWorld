@@ -1,11 +1,26 @@
 $(document).ready(function(){
+    
+    var resizeModalImage = function(height) {
+        height = height || $('#content img').height();
+        height = height - 5;
+        var width = $('#content').width() - 75 - $('#content img').width();
+        $('.overlay #content .container').height(height).width(width);
+        console.log('resize');
+    };
 
-    var descriptions = {monaLisa: "The Mona Lisa (Italian: Monna Lisa or La Gioconda, French: La Joconde) or La Gioconda is a half-length portrait of a woman by the Italian artist Leonardo da Vinci, which has been acclaimed as \"the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world\".The painting, thought to be a portrait of Lisa Gherardini, the wife of Francesco del Giocondo, is in oil on a whiteLombardy poplar panel, and is believed to have been painted between 1503 and 1506. Leonardo may have continued working on it as late as 1517. It was acquired by King Francis I of France and is now the property of theFrench Republic, on permanent display at the Louvre Museum in Paris since 1797. The subject's expression, which is frequently described as enigmatic, the monumentality of the composition, the subtle modeling of forms, and the atmospheric illusionism were novel qualities that have contributed to the continuing fascination and study of the work."}
-    console.log(descriptions)
+    var img = new Image();
+    img.onload = function() {
+        var height = $('#content img').attr('src', this.src).height();
+        resizeModalImage(height);
+    };
+    img.src = 'assets/mona_lisa.jpg';
+
+    $(window).resize(function() {resizeModalImage()});
+
+
 
     $('#thumbnail').attr('src', 'assets/mona_lisa.jpg');
 
-    $('#title p').html(descriptions.monaLisa);
 
     $('.element').click(function(){
         $('.overlay').css({'left': '0', 'visibility': 'visible'}).fadeIn(100, function() {
@@ -16,7 +31,7 @@ $(document).ready(function(){
 
         $('#content p').html($(this).find('.text').html());
         //$('#content .image').css('background-image', 'url("assets/lisasmall.png")');
-        $('#content img').attr('src', 'assets/mona_lisa.jpg');
+        //$('#content img').attr('src', 'assets/mona_lisa.jpg');
     });
 
     $("#content").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){

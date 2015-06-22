@@ -76,20 +76,23 @@ body {
 	margin-top: 10px;
 	height: 12vh;
 	-ms-text-overflow: ellipsis;
-	text-overflow: ellipsis;
 	overflow: hidden;
-
+	padding: 5px;
+	text-overflow: ellipsis;
 }
 
 #elements .element img {
 	float: left;
-	height: 10vh;
-	padding: 5px 15px 5px 5px;
+	height: 12vh;
+	padding-right: 15px;
 }
 
 #elements .element .text {
 	font-size: 1em;
-	padding: 5px 10px 5px 5px;
+	height: 12vh;
+	line-height: 1em;
+	overflow: hidden;
+	padding-right: 15px;
 }
 
 .close {
@@ -139,23 +142,29 @@ body {
 
 .overlay #content div {
 	overflow: hidden;
+	padding: 20px;
 }
 
 .overlay #content img {
 	float: left;
-	width: 22%;
-	margin: 5vh 5% 5vh 3%;
+	margin-right: 20px;
+	width: 30%;
 }
 
-.overlay #content p {
+.overlay #content .container {
 	border-top: 1px solid rgb(142, 123, 78);
 	line-height: 1.5em;
-	padding-top: 1vh;
+	padding: 5px 10px 0 0;
+	overflow-y: auto;
 	text-align: left;
 	float: right;
 	font-size: 1em;
-	width: 65%;
-	margin: 5vh 5% 5vh 0;
+	width: 60%;
+	margin: 0;
+}
+
+.overlay #content .container p {
+	margin: 0;
 }
 
 .overlay .close {
