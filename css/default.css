@@ -58,7 +58,7 @@ body {
 #left-sidebar #description {
 	color: white;
 	font-size: 1em;
-	height: 27vh;
+	height: calc(30vh - 20px);
 	margin-top: 5px;
 	overflow-y: auto;
 	padding: 0 10px 0 0;
@@ -75,6 +75,7 @@ body {
 	cursor: pointer;
 	margin-top: 5px;
 	height: 12vh;
+	max-height: 100px;
 	-ms-text-overflow: ellipsis;
 	overflow: hidden;
 	padding: 5px;
@@ -84,12 +85,15 @@ body {
 #elements .element img {
 	float: left;
 	height: 12vh;
+	max-height: 100px;
+	max-width: 40%;
 	padding-right: 15px;
 }
 
 #elements .element .text {
 	font-size: 1em;
 	height: 12vh;
+	max-height: 100px;
 	line-height: 1em;
 	overflow: hidden;
 	padding-right: 15px;

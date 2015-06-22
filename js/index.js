@@ -18,24 +18,23 @@ $(document).ready(function(){
     img.src = 'assets/mona_lisa.jpg';
 
     (setLeftSidebarPadding = function() {
+        console.log('padding');
+
         var windowH = $(window).height();
-        var sidebarH = $('#left-sidebar').height()
+        var sidebarH = $('#left-sidebar').css('height', '').height()
         var padding = (windowH - sidebarH) / 2;
         if (padding > 0) {
             if (padding > 30)
                 padding = 30;
             $('#left-sidebar').css({'padding-top': padding, 'padding-bottom': padding, 'height': 'calc(100vh - ' + 2 * padding + 'px)'});
-        }
+        } else
+            $('#left-sidebar').css({'padding-top': 0, 'padding-bottom': 0, 'height': ''});
     })();
 
     $(window).resize(function() {
         setLeftSidebarPadding();
         resizeModalImage();
     });
-
-
-
-    $('#thumbnail').attr('src', 'assets/mona_lisa.jpg');
 
 
     $('.element').click(function(){
