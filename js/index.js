@@ -16,10 +16,12 @@ $(document).ready(function(){
     (setLeftSidebarPadding = function() {
         console.log('padding');
         var windowH = $(window).height();
-        var padding = (windowH - $('#left-sidebar').height()) / 2;
+        var sidebarH = $('#left-sidebar').height()
+        var padding = (windowH - sidebarH) / 2;
         if (padding > 0)
-            //if (padding > 3 / 100 * windowH)
-            //    padding = 3 / 100 * windowH;
+            if (padding >= 30)
+                $('#left-sidebar').height(sidebarH + padding * 2 - 60);
+                padding = 30;
             $('#left-sidebar').css({'padding-top': padding, 'padding-bottom': padding});
     })();
 
